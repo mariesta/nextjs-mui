@@ -2,6 +2,9 @@ import styles from './page.module.css'
 import Switch from "@mui/material/Switch";
 import CustomSlider from './CustomSlider';
 
+import Link from '@mui/material/Link';
+import * as NextLink from 'next/link';
+
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 export default function Home() {
@@ -15,6 +18,7 @@ export default function Home() {
      <Switch {...label} disabled defaultChecked />
      <CustomSlider warning={true} />
      <CustomSlider warning={false} />
+     <Link component={NextLink} href="/about">To About page</Link>
    </div>
  );
 }
